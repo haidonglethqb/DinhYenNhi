@@ -59,7 +59,7 @@ const Hero = () => {
           <div className="image-container">
             <div className="image-placeholder">
               <div className="profile-circle">
-                <span className="profile-initial">YN</span>
+                <img src="/avatar.jpg" alt="Dinh Thi Yen Nhi" className="profile-avatar" />
               </div>
             </div>
           </div>
