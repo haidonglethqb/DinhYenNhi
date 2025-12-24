@@ -1,0 +1,23 @@
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background patterns */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: 
+    repeating-linear-gradient(45deg, var(--primary-blue) 0, var(--primary-blue) 2px, transparent 2px, transparent 10px);
+  pointer-events: none;
+}

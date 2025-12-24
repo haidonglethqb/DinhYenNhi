@@ -1,0 +1,182 @@
+.about {
+  background: var(--white);
+  position: relative;
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease;
+}
+
+.objective-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.objective-card:hover::before {
+  transform: scaleX(1);
+}
+
+.objective-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2);
+  border-color: var(--light-blue);
+}
+
+.main-objective {
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 100%);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-size: 1.8rem;
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+  transition: all 0.3s ease;
+}
+
+.objective-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.objective-card h3 {
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.objective-card h4 {
+  font-size: 1.3rem;
+  color: var(--dark-blue);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.objective-card p {
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.highlight {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+  color: var(--white);
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.strengths h3 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.strength-item {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.strength-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+  border-left-color: var(--accent-blue);
+}
+
+.strength-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.strength-content h4 {
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.strength-content p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .objective-card {
+    padding: 25px;
+  }
+
+  .objective-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strength-item {
+    padding: 20px;
+  }
+
+  .strength-number {
+    font-size: 2rem;
+  }
+}
